@@ -22,7 +22,7 @@ def can_be_created_with_a_hash_of_attributes
   movie = Movie.create(attributes)
 end
 
-def can_be_created_in_a_block(title, release_date, director, lead, in_theaters)
+def can_be_created_in_a_block(args = { title: "The Room", release_date: 2003 })
   Movie.create do |m|
     m.title = title
     m.release_date = release_date
@@ -33,7 +33,7 @@ def can_be_created_in_a_block(title, release_date, director, lead, in_theaters)
 end
 
 def can_get_the_first_item_in_the_database
-  Movie.find(0)
+  Movie.find(1)
 end
 
 def can_get_the_last_item_in_the_database
