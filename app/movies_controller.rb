@@ -29,11 +29,11 @@ def can_be_created_in_a_block(args = __)
 end
 
 def can_get_the_first_item_in_the_database
-  Movie.find(1)
+  Movie.find(0)
 end
 
 def can_get_the_last_item_in_the_database
-  __
+  Movie.find(-1)
 end
 
 def can_get_size_of_the_database
@@ -41,7 +41,7 @@ def can_get_size_of_the_database
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  __
+  Movie.find(0)
 end
 
 def can_find_by_multiple_attributes
